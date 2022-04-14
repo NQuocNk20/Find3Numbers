@@ -1,0 +1,77 @@
+    <html>
+
+    <head></head>
+
+    <body>
+        <h1><b>
+                <center> Tìm 3 số có tổng bằng X trong dãy số nguyên</center>
+                <br>
+               
+            </b> </h1>
+            <h2> <center>Find 3 numbers with an X-sum in the array?</center></h2>
+        <script>
+
+            
+            // let a = [1, 2, -7, 5, 9, -3];
+            // let k = 29;
+
+            // for (let i = 0; i < a.length ; i++) {
+            //     for (let j = i + 1; j < a.length ; j++) {
+            //         for (let l = j + 1; l < a.length ; l++) {
+            //             if (a[i] + a[j] + a[l] == k) {
+            //                 console.log("Found 3 elements whose sum is = " + k);
+            //                 console.log(a[i] + a[j] + a[l]);
+                                
+            //             }
+            //         }
+            //     }
+            // }
+        
+        function find3Numbers(A, arr_size, sum)
+{
+    // let l, r;
+ 
+    // Fix the first element as A[i]
+    for (let i = 0; i < arr_size - 2; i++)
+    {
+ 
+        // Fix the second element as A[j]
+        for (let j = i + 1; j < arr_size - 1; j++)
+        {
+ 
+            // Now look for the third number
+            for (let k = j + 1; k < arr_size; k++)
+            {
+                if (A[i] + A[j] + A[k] == sum)
+                {
+                    console.log( A[i] +", " + A[j] + ", " + A[k]);
+                    return true;
+                }
+            }
+        }
+    }
+ 
+    // If we reach here, then no triplet was found
+    return false;
+}
+ 
+/* Driver code */
+  
+    let A = [ 1, 4, 45, 6, 10, 8 ];
+    let sum = 22;
+    let arr_size = A.length;
+    find3Numbers(A, arr_size, sum);
+
+
+            // let numbers = [1, 2, -7, 5, 9, -3];
+            // let tong = 6;
+            // for (let i = 0; i < numbers.length; i++) {
+            //     for (let j = 0; j < numbers.length; j++) {
+            //         if (numbers[i] + numbers[j] == tong)
+            //             console.log(numbers[i], numbers[j]);
+            //     }
+            // }
+        </script>
+    </body>
+
+    </html>
