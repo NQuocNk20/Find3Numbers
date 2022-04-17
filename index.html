@@ -1,44 +1,53 @@
-<html>
+    <html>
 
-<head></head>
+    <head></head>
 
-<body>
-    <h1><b>
-            <center> Tìm 3 số có tổng bằng X trong dãy số nguyên</center>
-            <br>
+    <body>
+        <h1><b>
+                <center> Tìm 3 số có tổng bằng X trong dãy số nguyên</center>
+                <br>
+               
+            </b> </h1>
+            <h2> <center>Find 3 numbers with an X-sum in the array?</center></h2>
+        <script>
+            let a = [1, 2, -7, 5, 9, -3];
+            let k = 8;
 
-        </b> </h1>
-    <h2>
-        <center>Find 3 numbers with an X-sum in the array?</center>
-    </h2>
-    <script>
-
-
-        let a = [1, 2, -7, 5, 9, -3];
-        let k = 8;
-
-        for (let i = 0; i < a.length - 1; i++) {
-            for (let j = i; j < a.length; j++) {
-                for (let l = j + 1; l < a.length; l++) {
-                    if (a[i] + a[j] + a[l] == k) {
-                        console.log(a[i] + ", " + a[j] + ", " + a[l]);
+            for (let i = 0; i < a.length ; i++) {
+                for (let j = i + 1; j < a.length ; j++) {
+                    for (let l = j + 1; l < a.length ; l++) {
+                        if (a[i] + a[j] + a[l] == k) {
+                            console.log("Found 3 elements whose sum is = " + k);
+                            console.log(a[i]+", " + a[j] +", " + a[l]);
+                                
+                        }
                     }
                 }
-            }dlakdaslkds
-        }
+            }
+        </script>
 
+        <script>
+            console.log("=================");
+            let arr = [1, 2, -7, 5, 9, -3];
+            let S = 8;
+            a = arr.sort((a,b) => a - b);
+            for (let i = 0; i < a.length ; i++) {
+                let z = arr.length - 1;
+                let j = i + 1;
+                while (j < z) {
+                    let sum = a[i] + a [j] + a[z];
+                    if(sum == S) {
+                        console.log(`${a[i]} , ${a[j]} , ${a[z]}`);
+                        j++;
+                    } else if (sum < S) {
+                        j++;
+                    }  else {
+                        z--;
+                    }
+                }
+            }        
+        </script>
 
+    </body>
 
-
-            // let numbers = [1, 2, -7, 5, 9, -3];
-            // let tong = 6;
-            // for (let i = 0; i < numbers.length; i++) {
-            //     for (let j = 0; j < numbers.length; j++) {
-            //         if (numbers[i] + numbers[j] == tong)
-            //             console.log(numbers[i], numbers[j]);
-            //     }
-            // }
-    </script>
-</body>
-
-</html>
+    </html>
